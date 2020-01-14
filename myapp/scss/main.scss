@@ -124,7 +124,7 @@ ul,li {
 // 	color: #000;
 // }
 .btn {
-	display: inline-block;
+	// display: inline-block;
 	text-transform: uppercase;
 	font-weight: 700;;
 	font-size: 16px;
@@ -134,41 +134,28 @@ ul,li {
 	cursor: pointer;
 	color: #fff;
 	background: $accent;
-	border: none;
-	min-width: 300px;
+	border: 1px solid $accent;
+	min-width: 230px;
 	text-align: center;
 	font-weight: 700;
 	@media screen and (max-width: 580px) {
 		min-width: 220px;
 		padding: 12px 45px;
 	}
-	&:hover {
-		background: #e0e6e7;
+	&:hover, &:active {
+		background: #fff;
+		border-color: $accent;
+		color: $accent;
 	}
-	&:active {
-		background: #bcd7da;
-	}
-	&--orange {
-		background: #ffc905;
-		box-shadow: 9px 8px 24px -8px rgba(208, 142, 0, 0.2);
-		&:hover {
-			background: #ffd53b;
-		}
-		&:active {
-			background: #ffb400;
+	&--white {
+		color: $accent;
+		background: #fff;
+		&:hover, &:active {
+			border-color: #5f5f5f;
+			color: #5f5f5f;
 		}
 	}
-	&--green {
-		color: #fff;
-		background: #075057;
-		box-shadow: 11px 8px 24px -8px rgba(7, 80, 87, 0.11);
-		&:hover {
-			background: #187179;
-		}
-		&:active {
-			background: #187179;
-		}
-	}
+
 }
 button.btn {
 	padding: 0;
@@ -177,6 +164,7 @@ button.btn {
 	}
 }
 .desctop-br {
+	display: inline;
 	@media screen and (max-width: 820px) {
 		display: none;
 	}
