@@ -4,6 +4,9 @@
     background-size: cover;
     overflow: hidden;
     padding: 144px 0 100px;
+    @media screen and (max-width: 580px) {
+        padding: 97px 0 89px;
+    }
     &__body {
         @media screen and (max-width: 580px) {
             display: flex;
@@ -19,6 +22,9 @@
         margin-bottom: 28px;
         @media screen and (max-width: 580px) {
             text-align: center;
+            font-size: 10px;
+            line-height: 16px;
+            padding: 0 15px;
         }
     }
 
@@ -30,8 +36,9 @@
 
         @media screen and (max-width: 580px) {
             text-align: center;
-            font-style: 10px;
+            font-size: 10px;
             line-height: 16px;
+            margin-bottom: 17px;
         }
     }
     &__items {
@@ -47,6 +54,9 @@
         @media screen and (max-width: 580px) {
             text-align: center;
             justify-content: center;
+            font-size: 10px;
+            line-height: 14px;
+            margin-bottom: 18px;
         }
     }
     &__item {
@@ -64,6 +74,7 @@
         @media screen and (max-width: 580px) {
             width: 80%;
             margin: 0 auto 18px;
+            padding: 15px 7px 11px;
         }
         &:before {
             content: "";
@@ -89,9 +100,10 @@
     }
     .btn {
         @media screen and (max-width: 580px) {
-            // display: block;
-            width: 306px;
+            width: 242px;
             margin: 0 auto;
+            padding: 12px 10px;
+            font-size: 12px;
         }
     }
 }
