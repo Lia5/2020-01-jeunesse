@@ -4,18 +4,22 @@
     background-size: cover;
     overflow: hidden;
     padding: 144px 0 100px;
-    @media screen and (max-width: 820px) {
-        padding-bottom: 60%;
-    }
-    @media screen and (max-width: 580px) {
-        padding: 121px 0 295px;
+    &__body {
+        @media screen and (max-width: 580px) {
+            display: flex;
+            flex-direction: column;
+           justify-content: center;
+        }
     }
     &__pre {
         font-size: 16px;
         line-height: 26px;
         font-weight: 400;
         max-width: 620px;
-            margin-bottom: 28px;
+        margin-bottom: 28px;
+        @media screen and (max-width: 580px) {
+            text-align: center;
+        }
     }
 
     &__subtitle {
@@ -23,19 +27,26 @@
         line-height: 20px;
         font-weight: 400;
         margin-bottom: 29px;
+
+        @media screen and (max-width: 580px) {
+            text-align: center;
+            font-style: 10px;
+            line-height: 16px;
+        }
     }
     &__items {
         display: flex;
         justify-content: space-between;
         width: 87%;
         margin-bottom: 65px;
-        @media screen and (max-width: 820px) {
+        @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
             width: 100%;
         }
-        @media screen and (max-width: 565px) {
-            font-size: 14px;
-            line-height: 18px;
-            margin-top: 36px;
+
+        @media screen and (max-width: 580px) {
+            text-align: center;
+            justify-content: center;
         }
     }
     &__item {
@@ -44,6 +55,16 @@
         background: #fff;
         position: relative;
         box-shadow: 23px 0px 27px -8px rgba(149, 149, 149, 0.36);
+
+        @media screen and (max-width: 767px) {
+            width: 50%;
+            width: 49%;
+            margin-bottom: 18px;
+        }
+        @media screen and (max-width: 580px) {
+            width: 80%;
+            margin: 0 auto 18px;
+        }
         &:before {
             content: "";
             position: absolute;
@@ -55,9 +76,7 @@
             height: 2px;
             background: $accent;
         }
-        @media screen and (max-width: 565px) {
-            width: 100%;
-        }
+
     }
 
     &__title {
@@ -69,6 +88,10 @@
 
     }
     .btn {
-        min-height: 300px;
+        @media screen and (max-width: 580px) {
+            // display: block;
+            width: 306px;
+            margin: 0 auto;
+        }
     }
 }

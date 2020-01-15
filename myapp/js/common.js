@@ -11,6 +11,7 @@ $(function() {
         $('.qa-next').click(function(e){
             e.preventDefault();
             if($(this).parent().prev().find('input:checked').length) {
+                $('.kviz-progress').find('.kviz-progress__item.active').removeClass('active').next().addClass('active'); 
                 $(this).parent().parent('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
             } else {
                 $(this).parent().find('.kviz__error').text('Выберите вариант ответа!');
@@ -21,17 +22,20 @@ $(function() {
         // for radiobuttons
         
             $('input[type="radio"]+.pick-item__label').click(function(){
-                delayRadio($(this));        
+                delayRadio($(this));       
             });
             function delayRadio(item) {
                 setTimeout( function () {
                     item.parent().parent().parent('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
-                }, 600 );   
+                    $('.kviz-progress').find('.kviz-progress__item.active').removeClass('active').next().addClass('active'); 
+                    
+                }, 500 );   
             };
 
         $(".qa-prev").click(function(e) {
             e.preventDefault();
             $(this).parent().parent('.step-slide').removeClass('step-slide--active').prev().addClass('step-slide--active');
+            $('.kviz-progress').find('.kviz-progress__item.active').removeClass('active').prev().addClass('active'); 
         });
     }
 

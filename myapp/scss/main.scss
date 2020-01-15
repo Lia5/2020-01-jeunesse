@@ -24,7 +24,7 @@ body {
 	overflow-x: hidden;
 	color: $text;
 	@media screen and (max-width: 1065px) {
-		font-size: 16px;
+		font-size: 12px;
 		line-height: 24px;
 	}
 	input, textarea {
@@ -58,8 +58,12 @@ b, strong {
 .wrap {
 	width: 100%;
 	max-width: 1170px;
-	// padding: 0 12px;
 	margin: 0 auto;
+	@media screen and (max-width: 1190px) {
+	  padding: 0 15px;
+
+	}
+	
 }
 a {
 	text-decoration: none;
@@ -101,9 +105,10 @@ ul,li {
 	text-transform: uppercase;
 	max-width: 800px;
 	margin-bottom: 55px;
-	@media screen and (max-width: 565px) {
-		font-size: 26px;
-		line-height: 30px;
+	@media screen and (max-width: 580px) {
+		text-align: center;
+		font-size: 18px;
+		line-height: 28px;
 	}
 }
 .title {
@@ -160,7 +165,11 @@ ul,li {
 button.btn {
 	padding: 0;
 	a {
+		color: #fff;
 		padding: 15px 45px;
+		&:hover {
+			color: $accent;
+		}
 	}
 }
 .desctop-br {
@@ -173,7 +182,6 @@ button.btn {
 @import "sections/header"; 
 @import "sections/home"; 
 @import "sections/3kviz"; 
-@import "sections/13consult";
 @import "sections/modal";
 
 @import "sections/footer"; 
