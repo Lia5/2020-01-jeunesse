@@ -164,7 +164,7 @@ $(function() {
                         // }
                     }
                 });
-                // fbq('track', 'Lead');
+                fbq('track', 'Lead');
                 }
 
                 } else {}
